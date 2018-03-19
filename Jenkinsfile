@@ -1,5 +1,5 @@
 node {
    checkout scm
-   sh "docker build -t localhost:5000/ubuntu-test ."
+   sh "sudo docker build -t localhost:5000/ubuntu-test ."
 
 }
