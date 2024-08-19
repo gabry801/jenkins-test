@@ -1,0 +1,1 @@
+docker login https://itchange.docker.pkg.sehlat.io -u gabriele.guaglianone@juliusbaer.com -p 14ab5e47-1eb6-4a92-9bd5-d33839b2e7c6
