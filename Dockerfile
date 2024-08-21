@@ -65,7 +65,7 @@ RUN mkdir -p /home/${USER}/.config/direnv/lib \
 RUN sudo mkdir /ide
 COPY unzip-ide.sh /ide/
 RUN sudo wget -O /ide/ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
-    sudo /ide/unzip_ide.sh && \
+    sudo /ide/unzip-ide.sh && \
     sudo chown -R developer:developer /ide/bin
 
 # Verify installations
