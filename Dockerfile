@@ -64,8 +64,8 @@ RUN mkdir -p /home/${USER}/.config/direnv/lib \
 # Install IJ
 RUN sudo mkdir /ide
 COPY unzip-ide.sh /ide/
-RUN wget -O /ide/ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
-    /ide/unzip_ide.sh && \
+RUN sudo wget -O /ide/ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
+    sudo /ide/unzip_ide.sh && \
     sudo chown -R developer:developer /ide/bin
 
 # Verify installations
