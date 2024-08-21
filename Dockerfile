@@ -66,7 +66,7 @@ RUN sudo mkdir /ide
 COPY unzip-ide.sh /ide/
 RUN wget -O /ide/ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
     /ide/unzip_ide.sh && \
-    chown -R developer:developer /ide/bin
+    sudo chown -R developer:developer /ide/bin
 
 # Verify installations
 RUN node --version && \
