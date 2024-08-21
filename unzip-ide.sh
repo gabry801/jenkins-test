@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 mkdir /tmp/ide
-tar -C /tmp/ide -xzf /ide.tar.gz
+tar -C /tmp/ide -xzf /ide/ide.tar.gz
 rm ide.tar.gz
 cd /tmp/ide
 find . -maxdepth 1 -type d -name * -execdir mv {} /ide \;
