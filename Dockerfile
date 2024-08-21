@@ -62,9 +62,10 @@ RUN mkdir -p /home/${USER}/.config/direnv/lib \
     && mise direnv activate > /home/${USER}/.config/direnv/lib/use_mise.sh
 
 # Install IJ
-RUN wget -O /ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
-    /validate_file_hash f9e9389f0184306cae8d8b464a7c9b5baabb3a10a526a76fa7f0e3b44a158b8d  ide.tar.gz && \
-    /unzip_ide.sh && \
+RUN mkdir /ide
+COPY unzip-ide.sh /ide/
+RUN wget -O /ide/ide.tar.gz https://download.jetbrains.com/idea/ideaIU-2022.1.4.tar.gz && \
+    /ide/unzip_ide.sh && \
     chown -R developer:developer /ide/bin
 
 # Verify installations
